@@ -1,0 +1,68 @@
+/**********系统管理员版块的CSS************/
+.top_tips{
+	height: 33px;
+	width: 960px;
+	background: #F2F2F2;
+	border-bottom: 1px solid #CDCDCD;
+}
+.top_left_tips{
+	height: 33px;
+	width: 100px;
+	float:left;
+	font-size: 15px;
+	font-weight: bold;
+}
+.top_right_tips{
+	height: 33px;
+	width: 200px;
+	float:right;
+	font-size: 12px;
+	margin-right:5px;
+	font-weight: bold;
+}
+#admin_main_under_info{
+	float:left;
+	width: 960px;
+	height:479px;
+}
+#admin_main_under_left_menu{
+	float:left;
+	width: 250px;
+	height:475px;
+	border-right: 1px solid #CDCDCD;
+}
+#admin_main_under_right_message{
+	float:left;
+	width: 670px;
+	height:475px;
+	margin-left:10px;
+}
+/****右边内容具体div*******/
+
+
+.admin_main_under_right_message_bdy{
+	float:left;
+	width: 650px;
+	height:440px;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+
+#father_plate{
+	margin-top:10px;
+	width: 650px;
+	height:30px;
+}
+#addplate_submit{
+	margin-top:7px;
+	width: 650px;
+	height:30px;
+}
+#sl_father_plate{
+	width: 200px;
+	height:30px;
+	font-size: 12px;
+	font-weight: bold;
+}
+

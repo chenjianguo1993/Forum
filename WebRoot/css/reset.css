@@ -1,0 +1,54 @@
+/******重置一些固定样式******/
+
+/**1.设置body**/
+body {
+	background: #FFF url(../images/bgimg.jpg) no-repeat 50% 0;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	font-family: 微软雅黑, 宋体, 'New York';
+}
+
+body,ul,ol,li,dl,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,.pr,.pc {
+	margin: 0;
+	padding: 0;
+}
+
+body,input,button,select,textarea {
+	font: 12px/1.5 Tahoma, 'Microsoft Yahei', 'mingliu';
+	color: #444;
+}
+
+#footer_container_box {
+	margin: 0 auto;
+	width: 960px;
+}
+
+#footer_container {
+	height: 140px;
+	width: 960px;
+	margin-bottom: 20px;
+}
+#notice_text{
+	float:left;
+	height:70px;
+	width: 960px;
+	font-size:12px;
+	text-align: center;
+}
+#notice_under{
+	float:left;
+	height:60px;
+	margin-top:5px;
+	width: 960px;
+	border-top: 1px solid #CDCDCD; 
+}
+#notice_under_author{
+	float:left;
+	height:50px;
+	margin-top:10px;
+	width: 300px;
+}
+

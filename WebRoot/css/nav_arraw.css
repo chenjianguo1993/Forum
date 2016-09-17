@@ -1,0 +1,43 @@
+#nav_arraw_box_container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+#nav_arraw_box {
+	margin: 2px 0;
+	margin-top: 5px; height : 29px;
+	border: none;
+	background: transparent;
+	line-height: 29px;
+	height: 29px;
+}
+
+#nav_arraw_left_tips {
+	float: left;
+	width: 85px;
+	height: 29px;
+}
+
+#nav_arraw_left_tips_one {
+	float:left;
+	width: 16px;
+	background: url(../images/search.png) no-repeat -8px
+		-119px;
+	height: 29px;
+	overflow: hidden;
+	
+}
+.nav_arraw_left_tips_second{
+	float:left;
+	width: 20px;
+	height: 29px;
+	background:url(../images/pt_item.png) no-repeat 3px 10px;
+}
+.nav_arraw_text{
+	float:left;
+	width: 48px;
+	font-size:12px;
+	height: 29px;
+	text-align: center;
+	color: #333;
+}

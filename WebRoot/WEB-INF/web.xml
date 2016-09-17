@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name></display-name>
+	<!-- 创智播客字符编码 -->
+	<filter>
+		<filter-name>EncdoingFilter</filter-name>
+		<filter-class>cn.itcast.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncdoingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 字符编码过滤器 -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>cn.forum.web.filter.CharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Html编码过滤器 -->
+	<filter>
+		<filter-name>HtmlFilter</filter-name>
+		<filter-class>cn.forum.web.filter.HtmlFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>HtmlFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 网站当前在线人数粗略计算监听器，通过会话个数计算 -->
+   <listener>
+       <listener-class>cn.forum.web.listener.OnlineCounterListener</listener-class>
+   </listener>
+   <!-- 网站当前在线人数精确计算监听器，通过计算登陆的用户个数计算 -->
+  <listener>
+       <listener-class>cn.forum.web.listener.LoginOnlineCounterSessionListener</listener-class>
+   </listener>
+   <servlet>
+    <servlet-name>ImageFont</servlet-name>
+    <servlet-class>cn.forum.utils.ImageFont</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>ImageFont</servlet-name>
+    <url-pattern>/servlet/ImageFont</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>IndexUIServlet</servlet-name>
+    <servlet-class>cn.forum.web.UI.IndexUIServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.forum.web.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>cn.forum.web.controller.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>cn.forum.web.controller.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterUIServlet</servlet-name>
+    <servlet-class>cn.forum.web.UI.RegisterUIServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminUIServlet</servlet-name>
+    <servlet-class>cn.forum.web.UI.AdminUIServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToAddPlateServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.ToAddPlateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddPlateServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.AddPlateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToAddRoleServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.ToAddRoleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToAddPrivilegeServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.ToAddPrivilegeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddRoleServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.AddRoleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddPrivilegeServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.AddPrivilegeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageListPlateServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.PageListPlateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToUpdatePlateServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.ToUpdatePlateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdatePlateServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.UpdatePlateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeletePlateByPlateIdServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.DeletePlateByPlateIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageListPrivilegesServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.privilege.PageListPrivilegesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeletePrivilegeByPrivilegeIdServlet</servlet-name>
+    <servlet-class>cn.forum.web.admin.privilege.DeletePrivilegeByPrivilegeIdServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>IndexUIServlet</servlet-name>
+    <url-pattern>/servlet/IndexUIServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/servlet/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterUIServlet</servlet-name>
+    <url-pattern>/servlet/RegisterUIServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminUIServlet</servlet-name>
+    <url-pattern>/servlet/AdminUIServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToAddPlateServlet</servlet-name>
+    <url-pattern>/servlet/ToAddPlateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddPlateServlet</servlet-name>
+    <url-pattern>/servlet/AddPlateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToAddRoleServlet</servlet-name>
+    <url-pattern>/servlet/ToAddRoleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToAddPrivilegeServlet</servlet-name>
+    <url-pattern>/servlet/ToAddPrivilegeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddRoleServlet</servlet-name>
+    <url-pattern>/servlet/AddRoleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddPrivilegeServlet</servlet-name>
+    <url-pattern>/servlet/AddPrivilegeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageListPlateServlet</servlet-name>
+    <url-pattern>/servlet/PageListPlateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToUpdatePlateServlet</servlet-name>
+    <url-pattern>/servlet/ToUpdatePlateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePlateServlet</servlet-name>
+    <url-pattern>/servlet/UpdatePlateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletePlateByPlateIdServlet</servlet-name>
+    <url-pattern>/servlet/DeletePlateByPlateIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageListPrivilegesServlet</servlet-name>
+    <url-pattern>/servlet/PageListPrivilegesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletePrivilegeByPrivilegeIdServlet</servlet-name>
+    <url-pattern>/servlet/DeletePrivilegeByPrivilegeIdServlet</url-pattern>
+  </servlet-mapping>
+	
+	
+</web-app>
